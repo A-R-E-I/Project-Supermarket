@@ -1,4 +1,4 @@
-def menu():
+def storage():
     global Quantities, Cart, cartItem, Cost
     Quantities = []
     Cart = []
@@ -21,14 +21,12 @@ def Askinfo():
             Calcprice();
         case("book bags"):
             initialprice = 30
-            checksize();
             Calcprice();
         case("erasers"):
             initialprice = 1
             Calcprice();
         case("folders"):
             initialprice = 1.50
-            checksize();
             Calcprice();
         case(_):
             print("Please type “pencils”, “composition notebooks”,  “book bags”, “erasers”, or “folders”");
@@ -69,9 +67,7 @@ def Addcart(money):
         case("1"):
             Cart.append(money);
             match(askitem):
-                case("book bags"|"folders"):
-                    cartItem.append(size + " " + askitem);
-                case("pencils"|"composition notebooks"|"erasers"):
+                case("pencils"|"composition notebooks"|"erasers"|"book bags"|"folders"):
                     cartItem.append(askitem);
             Cost.append(money);
             Results();
@@ -102,7 +98,7 @@ def Results():
             Results();
       
 def main():
-    menu();
+    storage();
   
 if __name__=="__main__":
     main();
