@@ -8,10 +8,10 @@ def menu():
     whichscreen = str(input("What department do you want to enter? Type a number from 1-8: "));
     match(whichscreen):
         case "1":
-            filepath = fileDir + "\Project-Supermarket-Fruit.py";
+            filepath = fileDir + "\\Project-Supermarket-Fruit.py";
 
         case "2":
-            filepath = fileDir + "\Screen2.py";
+            filepath = fileDir + "\\Screen2.py";
 
         case default:
             print("Please enter a number form 1-8");

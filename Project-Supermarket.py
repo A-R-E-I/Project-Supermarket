@@ -28,7 +28,7 @@ def FileCheck():
                 adminfile = open(filename,"x");
                 adminfile.close();
                 WriteToFile(username,password,filename);
-                filepath = fileDir + "\Project-Supermarket-Menu.py";
+                filepath = fileDir + "\\Project-Supermarket-Menu.py";
             case "2":
                 account();
             case default:
@@ -52,7 +52,7 @@ def checkpass():
         print("Wrong password. Try again");
         account();
     else:
-        filepath = fileDir + "\Project-Supermarket-Menu.py";
+        filepath = fileDir + "\\Project-Supermarket-Menu.py";
 
     filenamepath = {
         "__file__":filepath,
