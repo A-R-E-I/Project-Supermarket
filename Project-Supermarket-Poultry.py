@@ -13,25 +13,25 @@ def Askinfo():
     global initialprice, askitem
     print("\nWhat product would you like to purchase?");
     print("\n");
-    askitem = str(input(" 1) Orange juice \n 2) Apple juice \n 3) Pepsi \n 4) Iced tea \n 5) Dr. Pepper \n Enter here:"));
+    askitem = str(input(" pencils($0.30) \n composition notebooks($1.25) \n book bags($30) \n erasers($1) \n folders($1.50) \n Enter here:"));
     match(askitem):
-        case("Orange juice"):
-            initialprice = 3.0
+        case("pencils"):
+            initialprice = 0.30
             Calcprice();
-        case("Apple juice"):
+        case("composition notebooks"):
             initialprice = 1.25
             Calcprice();
-        case("Pepsi"):
+        case("book bags"):
             initialprice = 30
             Calcprice();
-        case("Iced tea"):
+        case("erasers"):
             initialprice = 1
             Calcprice();
-        case("Dr. Pepper"):
+        case("folders"):
             initialprice = 1.50
             Calcprice();
         case(_):
-            print("Please type “Orange juice”, “Apple juice”,  “Pepsi”, “Iced tea”, or “Dr. Pepper”");
+            print("Please type “pencils”, “composition notebooks”,  “book bags”, “erasers”, or “folders”");
             Askinfo();
             
 def Calcprice():
@@ -69,7 +69,7 @@ def Addcart(money):
         case("1"):
             Cart.append(money);
             match(askitem):
-                case("Orange juice"|"Apple juice"|"Pepsi"|"Iced tea"|"Dr. Pepper"):
+                case("pencils"|"composition notebooks"|"erasers"|"book bags"|"folders"):
                     cartItem.append(askitem);
             Cost.append(money);
             Results();
